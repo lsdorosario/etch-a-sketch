@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    flex-direction: column wrap;
+    align-content: center;
+    justify-content: center;
+    background-image: url(../img/background.svg);
+}
+
+#main-title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5rem;
+    color: #FFF;
+    margin-top: 1.5rem;
+}
+
