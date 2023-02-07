@@ -3,6 +3,10 @@ body {
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
+    color: #FFF;
+    font-family: 'Helvetica', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
     background-image: url(../img/background.svg);
 }
 
@@ -16,8 +20,39 @@ body {
     align-self: center;
 }
 
-#grid-border {
+#main-div {
+    display: flex;
     margin-top: 4rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8rem;
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.25rem;
+}
+
+#grid-size {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #FFF;
+    background-color: transparent;
+    text-align: center;
+    height: 2rem;
+    width: 8rem;
+    border: 2px solid #FFF;
+    border-radius: 5px;
+}
+
+option {
+    background-color: #A33; /* Fakes dropdown menu transparency*/
+}
+
+#grid-border {
     border-radius: 1rem;
     border: 1rem solid red;
 }
@@ -31,6 +66,9 @@ body {
     height: 40rem;
     width: 40rem;
 }
+
+
+/* DOM style rules */
 
 .painted {
     background-color: black;

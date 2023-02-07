@@ -6,8 +6,10 @@ const gridWidth = gridContainer.offsetWidth;
 // Creates one block
 function createBlock() {
     const gridBlock = document.createElement("div");
-    gridBlock.style.height = `${gridHeight / 16}px`; // Gets grid height, divides by 16 and converts to a px value
-    gridBlock.style.width = `${gridHeight / 16}px`; // Gets grid width, divides by 16 and converts to a px value
+    // Gets grid height, divides by selected grid size and converts to a px value
+    gridBlock.style.height = `${gridHeight / 16}px`; 
+    gridBlock.style.width = `${gridHeight / 16}px`;
+
     gridContainer.appendChild(gridBlock);
 
     gridBlock.addEventListener("mouseover", function() {
@@ -15,7 +17,11 @@ function createBlock() {
     });
 }
 
-// Loops 256 times to create a 16x16 grid (16²)
+// function selectGridSize() {
+//     const gridSize = document.getElementById("grid-size");
+//     return parseInt(gridSize.value);
+// }
+
 for (let i = 0; i < 256; i++) {
     createBlock();
 }
