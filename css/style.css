@@ -31,3 +31,7 @@ body {
     height: 40rem;
     width: 40rem;
 }
+
+.painted {
+    background-color: black;
+}
