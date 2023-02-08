@@ -9,9 +9,6 @@ document.getElementById("size-selection").onchange = changeListener;
 const resetButton = document.getElementById("reset");
 resetButton.onclick = createGrid;
 
-const rgbButton = document.getElementById("rgb-mode");
-rgbButton.onclick = rgbMode;
-
 function getGridSize() {
     const sizeSelection = document.getElementById("size-selection");
     let gridSize = parseInt(sizeSelection.value);
