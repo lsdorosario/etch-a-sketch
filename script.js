@@ -3,11 +3,11 @@ const gridContainer = document.getElementById("grid-container");
 const gridHeight = gridContainer.offsetHeight;
 const gridWidth = gridContainer.offsetWidth;
 
-// Run
-createGrid();
-
 // Sets change listener to grid size options
 document.getElementById("size-selection").onchange = changeListener;
+
+const resetButton = document.getElementById("reset");
+resetButton.onclick = createGrid;
 
 function getGridSize() {
     const sizeSelection = document.getElementById("size-selection");
@@ -46,3 +46,5 @@ function changeListener() {
     if (value) createGrid();
 }
 
+// Run
+createGrid();

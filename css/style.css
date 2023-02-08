@@ -25,10 +25,10 @@ body {
     margin-top: 4rem;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 8rem;
+    gap: 4rem;
 }
 
-.right-side {
+.left-side, .right-side {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -36,7 +36,7 @@ body {
     gap: 1.25rem;
 }
 
-#size-selection {
+.side-buttons {
     font-size: 1.25rem;
     font-weight: bold;
     color: #FFF;
