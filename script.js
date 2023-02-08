@@ -3,12 +3,18 @@ const gridContainer = document.getElementById("grid-container");
 const gridHeight = gridContainer.offsetHeight;
 const gridWidth = gridContainer.offsetWidth;
 
+function getGridSize() {
+    const sizeSelection = document.getElementById("size-selection");
+    let gridSize = parseInt(sizeSelection.value);
+    return gridSize;
+}
+
 // Creates one block
 function createBlock() {
     const gridBlock = document.createElement("div");
     // Gets grid height, divides by selected grid size and converts to a px value
-    gridBlock.style.height = `${gridHeight / 16}px`; 
-    gridBlock.style.width = `${gridHeight / 16}px`;
+    gridBlock.style.height = `${gridHeight / getGridSize()}px`; 
+    gridBlock.style.width = `${gridHeight / getGridSize()}px`;
 
     gridContainer.appendChild(gridBlock);
 
@@ -17,11 +23,14 @@ function createBlock() {
     });
 }
 
-// function selectGridSize() {
-//     const gridSize = document.getElementById("grid-size");
-//     return parseInt(gridSize.value);
-// }
+// Resets current grid and creates new one based on user selection
+function createGrid() {
+    resetGrid();
+    for (let i = 0; i < Math.pow(getGridSize(), 2); i++) {
+        createBlock();
+    }
+}
 
-for (let i = 0; i < 256; i++) {
-    createBlock();
+function resetGrid() {
+    gridContainer.innerHTML = '';
 }

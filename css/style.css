@@ -36,7 +36,7 @@ body {
     gap: 1.25rem;
 }
 
-#grid-size {
+#size-selection {
     font-size: 1.25rem;
     font-weight: bold;
     color: #FFF;
@@ -65,6 +65,8 @@ option {
     background-color: #FFF;
     height: 40rem;
     width: 40rem;
+    max-height: 40rem;
+    max-width: 40rem;
 }
 
 
